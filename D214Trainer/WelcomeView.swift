@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        Text("Oh no... there's a conflict")
         Color.red
             .ignoresSafeArea()
             .overlay {
