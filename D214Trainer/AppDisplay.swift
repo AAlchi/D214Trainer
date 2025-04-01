@@ -123,7 +123,7 @@ struct DisplayView: View {
     }
 }
 
-struct DisplayPage_Previews: PreviewProvider {
+struct DisplayView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
