@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1400BC312D9B8075002E6991 /* AppDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1400BC302D9B8075002E6991 /* AppDisplay.swift */; };
+		1400BC472D9CE000002E6991 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1400BC462D9CE000002E6991 /* RecipeView.swift */; };
 		A29631AF2D8CCDD20070A889 /* D214TrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29631AE2D8CCDD20070A889 /* D214TrainerApp.swift */; };
 		A29631B12D8CCDD20070A889 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29631B02D8CCDD20070A889 /* WelcomeView.swift */; };
 		A29631B32D8CCDD40070A889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29631B22D8CCDD40070A889 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		1400BC302D9B8075002E6991 /* AppDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDisplay.swift; sourceTree = "<group>"; };
+		1400BC462D9CE000002E6991 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		A29631AB2D8CCDD20070A889 /* D214Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D214Trainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29631AE2D8CCDD20070A889 /* D214TrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D214TrainerApp.swift; sourceTree = "<group>"; };
 		A29631B02D8CCDD20070A889 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				A29631B02D8CCDD20070A889 /* WelcomeView.swift */,
 				BE4942F72D8CD4A100A20E00 /* loadingscreen.swift */,
 				1400BC302D9B8075002E6991 /* AppDisplay.swift */,
+				1400BC462D9CE000002E6991 /* RecipeView.swift */,
 				A29631B22D8CCDD40070A889 /* Assets.xcassets */,
 				A29631B42D8CCDD40070A889 /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 				A29631AF2D8CCDD20070A889 /* D214TrainerApp.swift in Sources */,
 				1400BC312D9B8075002E6991 /* AppDisplay.swift in Sources */,
 				BE4942F82D8CD4B200A20E00 /* loadingscreen.swift in Sources */,
+				1400BC472D9CE000002E6991 /* RecipeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
