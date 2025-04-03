@@ -9,19 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Oh no... there's a conflict")
         Color.red
             .ignoresSafeArea()
             .overlay {
-                
                 VStack(alignment: .leading) {
-                    
                     Text("Good morning!").foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .font(.largeTitle.weight(.bold))
                         .padding()
-                        
-                    
                     
                     Text("SELECT YOUR TASK").foregroundColor(.white)
                         .multilineTextAlignment(.center)
@@ -29,13 +24,9 @@ struct ContentView: View {
                     
                 }
                 
-                
                 VStack(alignment: .leading) {
-                    
                     Button(action: {
                         print("Clicked")
-                            
-                        
                     }) {
                         Text("Soft Skills").foregroundColor(.red)
                             .font(.title)
@@ -45,10 +36,6 @@ struct ContentView: View {
                             .fontWeight(.bold)
                             .padding(10)
                             .position(x: 150, y: 300)
-                            
-                        
-                        
-                        
                         
                         }
                     .frame(width:300, height: 300, alignment: .trailing)
@@ -58,7 +45,6 @@ struct ContentView: View {
                 VStack {
                     Button(action: {
                         print("Clicked")
-                        
                     }) {
                         Text("Hard Skills").foregroundColor(.red)
                             .background(Color.white)
@@ -67,19 +53,10 @@ struct ContentView: View {
                             .fontWeight(.bold)
                             .padding(10)
                             .position(x: 150, y: 250)
-                            
-                        
-                        
                     }
                 }
                 .frame(width:300, height: 300, alignment: .trailing)
             }
-        
-        
-        
-        
-        
-        
     }
 }
 

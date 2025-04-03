@@ -7,8 +7,6 @@ struct RecipeView: View {
             
             VStack {
                 HStack {
-                   
-                    
                     Text("D214 Trainer")
                         .font(.title)
                         .bold()
@@ -50,10 +48,8 @@ struct RecipeView: View {
                         .padding(.horizontal)
                         
                         VStack {
-                            
                             Text("Ingredients")
                                 .font(.headline)
-                                
                                 .padding(.top)
                                 .font(.largeTitle)
                             Text("1 shot of Espresso")
@@ -65,7 +61,6 @@ struct RecipeView: View {
                         }
                         .frame(width: 1000, height: 600)
                         .border(Color.black, width: 7)
-                        
                         .padding()
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
                         .foregroundColor(.white)

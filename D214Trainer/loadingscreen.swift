@@ -21,15 +21,11 @@ struct LoadingView: View {
             
             VStack {
                 HStack {
-                   
-                    
                     Text("D214 Trainer")
                         .font(.title)
                         .bold()
                         .foregroundColor(.white)
-                       
                     Spacer()
-                    
                     Text("Recipe | Make a Cappuccino")
                         .foregroundColor(.white)
                         .bold()
@@ -37,6 +33,7 @@ struct LoadingView: View {
                         .padding(.top, 30)
                 }
                 .padding()
+                
                 ZStack {
                     RoundedRectangle(cornerRadius: 15)
                         .fill(Color.white)
@@ -64,7 +61,6 @@ struct LoadingView: View {
                         .padding(.horizontal)
                         
                         VStack {
-                            
                             Text("Ingredients")
                                 .font(.headline)
                                 
@@ -79,7 +75,6 @@ struct LoadingView: View {
                         }
                         .frame(width: 1000, height: 600)
                         .border(Color.black, width: 7)
-                        
                         .padding()
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
                         .foregroundColor(.white)
