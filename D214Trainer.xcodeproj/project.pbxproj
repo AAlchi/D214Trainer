@@ -38,6 +38,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A20B96D82DA6F34C004A5ED4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1400BC302D9B8075002E6991 /* AppDisplay.swift */,
+				1400BC462D9CE000002E6991 /* RecipeView.swift */,
+				BE4942F72D8CD4A100A20E00 /* loadingscreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A29631A22D8CCDD20070A889 = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +69,7 @@
 			children = (
 				A29631AE2D8CCDD20070A889 /* D214TrainerApp.swift */,
 				A29631B02D8CCDD20070A889 /* WelcomeView.swift */,
-				BE4942F72D8CD4A100A20E00 /* loadingscreen.swift */,
-				1400BC302D9B8075002E6991 /* AppDisplay.swift */,
-				1400BC462D9CE000002E6991 /* RecipeView.swift */,
+				A20B96D82DA6F34C004A5ED4 /* Views */,
 				A29631B22D8CCDD40070A889 /* Assets.xcassets */,
 				A29631B42D8CCDD40070A889 /* Preview Content */,
 			);
