@@ -1,14 +1,6 @@
 //
 //  ContentView.swift
-//  D214Trainer
-//
-//  Created by Logan Hammond on 3/31/25.
-//
-
-
-//
-//  ContentView.swift
-//  appDisplay
+//  DisplayView
 //
 //  Created by Logan Hammond on 2/25/25.
 //
@@ -125,6 +117,6 @@ struct DisplayView: View {
 
 struct DisplayView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DisplayView()
     }
 }

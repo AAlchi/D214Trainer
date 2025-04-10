@@ -1,6 +1,13 @@
+//
+//  ContentView.swift
+//  RecipeView
+//
+//  Created by Logan Hammond on 3/11/25.
+//
+
 import SwiftUI
 
-struct RecipeView: View {
+struct RecipeComponent: View {
     var body: some View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
@@ -97,8 +104,8 @@ struct RecipeView: View {
     }
 }
 
-struct RecipeView_Previews: PreviewProvider {
+struct RecipeComponent_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeView()
+        RecipeComponent()
     }
 }

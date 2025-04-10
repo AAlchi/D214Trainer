@@ -1,17 +1,11 @@
 //
 //  ContentView.swift
-//  recipeComponent
-//
-//  Created by Logan Hammond on 3/11/25.
-//
-
-//
-//  ContentView.swift
-//  appDisplay
+//  LoadingView
 //
 //  Created by Logan Hammond on 2/25/25.
 //
-//Hello
+
+
 import SwiftUI
 
 struct LoadingView: View {
@@ -111,8 +105,8 @@ struct LoadingView: View {
     }
 }
 
-struct DisplayPage_Previews: PreviewProvider {
+struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoadingView()
     }
 }
