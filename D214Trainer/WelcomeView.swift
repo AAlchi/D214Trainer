@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
         Color(red: 196/255, green: 48/255, blue: 18/255)
             .ignoresSafeArea()
             .overlay {
@@ -17,11 +18,11 @@ struct ContentView: View {
                     
                     Text("Good morning!").foregroundColor(.white)
                         .multilineTextAlignment(.center)
-                        .font(.system(size:60))
+                        .font(.system(size:61))
                         .bold()
                         .padding()
                         .position(x: 210, y: 200)
-                        
+                    
                     
                     
                     Text("SELECT YOUR TASK").foregroundColor(.white)
@@ -30,11 +31,11 @@ struct ContentView: View {
                         .bold()
                         .position(x: 195, y:100)
                     
-              
+                    
                     
                     Button(action: {
                         print("Clicked")
-                            
+                        
                         
                     }) {
                         Text("   Soft Skills          ").foregroundColor(Color(red: 196/255, green: 48/255, blue: 18/255))
@@ -46,12 +47,13 @@ struct ContentView: View {
                             .fontWeight(.bold)
                             .padding(10)
                             .position(x: 200, y: 175)
-                            
+                            .cornerRadius(11)
                         
                         
                         
                         
-                        }
+                        
+                    }
                     .frame(width:1200, height: 450, alignment: .trailing)
                 }
                 
@@ -61,32 +63,33 @@ struct ContentView: View {
                     Button(action: {
                         print("Clicked Again")
                         
+                        
                     }) {
                         Text("   Hard Skills         ").foregroundColor(Color(red: 196/255, green: 48/255, blue: 18/255))
                             .background(Color.white)
                             .border(.black)
+                            .cornerRadius(11)
                             .font(.title)
                             .fontWeight(.bold)
                             .padding(10)
                             .position(x: 200, y: 250)
-                            
+                        
                         
                         
                     }
                 }
                 .frame(width:1200, height: 500, alignment: .trailing)
             }
-        
-        
-        
-        
-        
-        
     }
 }
+        
+        struct ContentView_Previews: PreviewProvider {
+            static var previews: some View {
+                ContentView()
+                
+                
+                
+            }
+        }
+    
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
