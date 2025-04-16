@@ -1,115 +1,112 @@
 //
 //  ContentView.swift
-//  DisplayView
+//  VideoComponent
 //
-//  Created by Logan Hammond on 2/25/25.
+//  Created by Daniel T. Do on 3/22/25.
 //
 
 import SwiftUI
+import WebKit
 
+struct VideoView: UIViewRepresentable {
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        webView.configuration.allowsInlineMediaPlayback = true
+        webView.configuration.mediaTypesRequiringUserActionForPlayback = []
+        return webView
+    }
+    
+    let videoID: String //Variable to change video
+    
+    func updateUIView(_ uiView: WKWebView, context: Context){
+        guard let url = URL(string: "https://www.youtube.com/embed/\(videoID)?si=dJDFIBwrDrO55Nac") else {
+            return
+        }
+        let request = URLRequest(url: url)
+        uiView.load(request)
+    }
+    
+}
 struct DisplayView: View {
     var body: some View {
         ZStack {
-            Color.red.edgesIgnoringSafeArea(.all)
+            Color.white
+                .ignoresSafeArea()
             
-            VStack {
-                HStack {
-                    Button(action: {
-                    }) {
-                        Image(systemName: "arrow.left")
-                            .foregroundColor(.white)
-                            .frame(width: 50, height: 50)
-                    }
-                    
-                    Text("D214 Trainer")
-                        .font(.title)
-                        .bold()
+            VStack(spacing: 50) {
+                Spacer()
+                // Top Heading
+                Text("Cleaning the Espresso Machine")
+                    .font(.system(size: 45, weight: .bold))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(Color.black, lineWidth: 4)
+                            )
+                    )
+                    .padding(.horizontal, 150)
+                
+              
+                   
+                // Step Box
+                VStack(spacing: 20) {
+                    Text("Step 1:")
+                        .font(.system(size: 50, weight: .bold))
                         .foregroundColor(.white)
-                       
-                    Spacer()
                     
-                    Text("Recipe | Make a Cappuccino")
+                    Text("Watch this video")
+                        .font(.system(size: 30))
                         .foregroundColor(.white)
-                        .bold()
-                        .font(.largeTitle)
-                        .padding(.top, 30)
+                        .multilineTextAlignment(.center)
+                    VideoView(videoID: "iJLgi3sPf4Q")
+                        .frame(height:250)
+                        .frame(width: 450)
+                        .cornerRadius(15)
+                        .padding()
+                    
                 }
                 .padding()
-                ZStack {
+                .frame(maxWidth: .infinity)
+                .background(
                     RoundedRectangle(cornerRadius: 15)
-                        .fill(Color.white)
-                        .padding()
-                    
-                    VStack {
-                        HStack {
-                            Text("Cappuccino")
-                                .font(.largeTitle)
-                                .font(.title2)
-                                .bold()
-                                .padding()
-                                .frame(width: 900, height: 100)
-                                .border(Color.black, width: 7)               .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
-                                .foregroundColor(.white)
-                                .padding()
-                            Spacer()
-                            
-                            Image("cup")
-                                .resizable()
-                                .frame(width: 150, height: 150)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .padding()
-                        }
-                        .padding(.horizontal)
-                        
-                        VStack {
-                            
-                            Text("Ingredients")
-                                .font(.headline)
-                                
-                                .padding(.top)
-                                .font(.largeTitle)
-                            Text("1 shot of Espresso")
-                                .padding(.top, 2)
-                                .font(.largeTitle)
-                            Text("150 ml semi skimmed milk")
-                                .padding(.bottom)
-                                .font(.largeTitle)
-                        }
-                        .frame(width: 1000, height: 600)
-                        .border(Color.black, width: 7)
-                        
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
-                        .foregroundColor(.white)
-                        .padding(.horizontal)
-                        
-                        Spacer()
-                        
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                            }) {
-                                Image(systemName: "arrow.right")
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .frame(width: 100, height: 30)
-                                    .border(Color.black, width: 2)
-                                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
-                                    .padding(.bottom)
-
-                            }
-                            .padding(.trailing, 100)
-                            .padding()
-                        }
-                    }
-                }
+                        .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.black, lineWidth: 4)
+                        )
+                )
+                .padding(.horizontal, 80)
+                
+            
+                
+                // Arrow Button Bottom Right
                 HStack {
                     Spacer()
-                    Text("Soft Skill")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .padding(.trailing)
+                        .frame(width: 800.0)
+                    Button(action: {
+                        // Add your action here
+                    }) {
+                        Image(systemName: "arrowshape.forward.fill")
+                            .resizable()
+                                  .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 25)
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
+                            )
+                    }
+                    
                 }
+                .padding(30)
             }
         }
     }
@@ -120,3 +117,4 @@ struct DisplayView_Previews: PreviewProvider {
         DisplayView()
     }
 }
+

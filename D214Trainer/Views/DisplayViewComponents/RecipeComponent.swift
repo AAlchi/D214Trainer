@@ -1,111 +1,61 @@
-//
-//  ContentView.swift
-//  RecipeView
-//
-//  Created by Logan Hammond on 3/11/25.
-//
-
 import SwiftUI
 
-struct RecipeComponent: View {
+struct RecipeComponentView: View {
     var body: some View {
         ZStack {
-            Color.white.edgesIgnoringSafeArea(.all)
+            // Fullscreen red background
+            Color(red: 0.75, green: 0.05, blue: 0.15)
+                .ignoresSafeArea()
             
-            VStack {
-                HStack {
-                    Text("D214 Trainer")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(.white)
-                       
-                    Spacer()
-                    
-                    Text("Recipe | Make a Cappuccino")
-                        .foregroundColor(.white)
-                        .bold()
-                        .font(.largeTitle)
-                        .padding(.top, 30)
-                }
-                .padding()
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .fill(Color.white)
-                        .padding()
-                    
-                    VStack {
-                        HStack {
-                            Text("Cappuccino")
-                                .font(.largeTitle)
-                                .font(.title2)
-                                .bold()
-                                .padding()
-                                .frame(width: 900, height: 100)
-                                .border(Color.black, width: 5)               .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
-                                .foregroundColor(.white)
-                                .padding()
-                            Spacer()
-                            
-                            Image("cup")
-                                .resizable()
-                                .frame(width: 150, height: 150)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .padding()
-                        }
-                        .padding(.horizontal)
-                        
-                        VStack {
-                            Text("Ingredients")
-                                .font(.headline)
-                                .padding(.top)
-                                .font(.largeTitle)
-                            Text("1 shot of Espresso")
-                                .padding(.top, 2)
-                                .font(.largeTitle)
-                            Text("150 ml semi skimmed milk")
-                                .padding(.bottom)
-                                .font(.largeTitle)
-                        }
-                        .frame(width: 1000, height: 600)
-                        .border(Color.black, width: 7)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
-                        .foregroundColor(.white)
-                        .padding(.horizontal)
-                        
-                        Spacer()
-                        
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                            }) {
-                                Image(systemName: "arrow.right")
-                                    .padding()
-                                    .frame(width: 100, height: 30)
-                                    .border(Color.black, width: 2)
-                                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
-                                    .padding(.bottom)
+            VStack(spacing: 40) {
+                Spacer() // This moves content downward slightly
 
-                            }
-                            .padding(.trailing, 100)
-                            .padding()
-                        }
+                // Ingredients Title
+                Text("Ingredients")
+                    .font(.system(size: 40, weight: .bold))
+                    .foregroundColor(.white)
+
+                // Ingredients List
+                VStack(spacing: 20) {
+                    Text("1 shot of Espresso")
+                        .font(.system(size: 30))
+                        .foregroundColor(.white)
+                    
+                    Text("150 ml semi skimmed milk")
+                        .font(.system(size: 30))
+                        .foregroundColor(.white)
+                }
+
+                Spacer()
+
+                // Bottom Right Arrow Button
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        // Add your action here
+                    }) {
+                        Image(systemName: "arrowshape.forward.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 25)
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
+                            )
                     }
                 }
-                HStack {
-                    Spacer()
-                    Text("Soft Skill")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .padding(.trailing)
-                }
+                .padding()
             }
+            .padding()
         }
     }
 }
 
-struct RecipeComponent_Previews: PreviewProvider {
+struct RecipeComponentView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeComponent()
+        RecipeComponentView()
     }
 }
+
