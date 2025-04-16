@@ -15,6 +15,7 @@
 		A29631B32D8CCDD40070A889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29631B22D8CCDD40070A889 /* Assets.xcassets */; };
 		A29631B62D8CCDD40070A889 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29631B52D8CCDD40070A889 /* Preview Assets.xcassets */; };
 		BE4942F82D8CD4B200A20E00 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4942F72D8CD4A100A20E00 /* LoadingView.swift */; };
+		C9BEF3BD2DB0435C002DC1CA /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BEF3BC2DB04351002DC1CA /* CreateTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A29631B22D8CCDD40070A889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A29631B52D8CCDD40070A889 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE4942F72D8CD4A100A20E00 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C9BEF3BC2DB04351002DC1CA /* CreateTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,8 @@
 		A20B96D82DA6F34C004A5ED4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C9BEF3BE2DB043FF002DC1CA /* CreateTaskComponents */,
+				C9BEF3BC2DB04351002DC1CA /* CreateTask.swift */,
 				A234CDAA2DA87AE6008FBE36 /* DisplayViewComponents */,
 				1400BC302D9B8075002E6991 /* DisplayView.swift */,
 				BE4942F72D8CD4A100A20E00 /* LoadingView.swift */,
@@ -93,6 +97,13 @@
 				A29631B52D8CCDD40070A889 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C9BEF3BE2DB043FF002DC1CA /* CreateTaskComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateTaskComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A234CDAC2DA87C3A008FBE36 /* VideoComponent.swift in Sources */,
+				C9BEF3BD2DB0435C002DC1CA /* CreateTask.swift in Sources */,
 				A234CDAE2DA87CF9008FBE36 /* RecipeComponent.swift in Sources */,
 				A29631B12D8CCDD20070A889 /* WelcomeView.swift in Sources */,
 				A29631AF2D8CCDD20070A889 /* D214TrainerApp.swift in Sources */,
