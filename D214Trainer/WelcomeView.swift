@@ -19,10 +19,8 @@ struct WelcomeView: View {
             Image("img")
                 .position(x:960 , y:400)
             
-            HStack {
+            VStack {
                 Spacer()
-                
-                
                 
                 Text("Good morning!").foregroundColor(.white)
                     .multilineTextAlignment(.center)
@@ -37,7 +35,7 @@ struct WelcomeView: View {
                     .multilineTextAlignment(.center)
                     .font(.system(size:32))
                     .bold()
-                    .position(x: -390, y:275)
+                    .position(x: 210, y:-100)
                 
                 
                 
@@ -58,7 +56,7 @@ struct WelcomeView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(10)
-                        .position(x: 200, y: 250)
+                        .position(x: 200, y: 400)
                     
                     
                     
@@ -66,17 +64,37 @@ struct WelcomeView: View {
                     
                     
                 }
+                VStack(alignment: .leading) {
+                    
+                    Button(action: {
+                        print("click")
+                        
+                    }) {
+                        Text("   Soft Skills         ").foregroundColor(Color(red: 194/255, green: 23/255, blue: 58/255))
+                            .background(Color.white)
+                            .border(.black)
+                            .cornerRadius(11)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .padding(10)
+                            .position(x: 200, y: 50)
+                    }
+                    
+                    .frame(width:300, height: 300, alignment: .trailing)
+                }
                 
-                .frame(width:1200, height: 500, alignment: .trailing)
+                
+                
+                
+                
             }
+            
+            
         }
-           
-        
-        
     }
         struct ContentView_Previews: PreviewProvider {
             static var previews: some View {
-                ContentView()
+                WelcomeView()
                 
                 
                 
@@ -86,5 +104,6 @@ struct WelcomeView: View {
         
         
     }
+    
     
 
