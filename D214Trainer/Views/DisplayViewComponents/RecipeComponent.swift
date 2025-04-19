@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RecipeComponentView: View {
+struct RecipeComponent: View {
     var body: some View {
         ZStack {
             // Fullscreen red background
@@ -53,9 +53,9 @@ struct RecipeComponentView: View {
     }
 }
 
-struct RecipeComponentView_Previews: PreviewProvider {
+struct RecipeComponent_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeComponentView()
+        RecipeComponent()
     }
 }
 

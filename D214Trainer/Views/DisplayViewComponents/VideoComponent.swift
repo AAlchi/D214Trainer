@@ -8,7 +8,7 @@
 import SwiftUI
 import WebKit
 
-struct VideoComponentView: View {
+struct VideoComponent: View {
 var body: some View {
             ZStack {
                 // Full screen red background
@@ -60,8 +60,8 @@ var body: some View {
         }
     }
 
-struct VideoComponentView_Previews: PreviewProvider {
+struct VideoComponent_Previews: PreviewProvider {
 static var previews: some View {
-    VideoComponentView()
+    VideoComponent()
 }
 }
