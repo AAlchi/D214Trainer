@@ -106,9 +106,9 @@ struct DisplayView: View {
     }
 }
 
-struct DisplayView_Previews: PreviewProvider {
-    static var previews: some View {
-        DisplayView()
-    }
-}
+//struct DisplayView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DisplayView()
+//    }
+//}
 
