@@ -12,87 +12,89 @@ struct WelcomeView: View {
         
         
         
-        
-        ZStack {
-            Color(red: 194/255, green: 23/255, blue: 58/255)
-                .ignoresSafeArea()
-            Image("img")
-                .position(x:960 , y:400)
-            
-            VStack {
-                Spacer()
-                
-                Text("Good morning!").foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .font(.system(size:61))
-                    .bold()
-                    .padding()
-                    .position(x: 210, y: 200)
-                
-                
-                
-                Text("SELECT YOUR TASK").foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .font(.system(size:32))
-                    .bold()
-                    .position(x: 210, y:-100)
-                
-                
-                
-                
-            }
-            
-            
+        HStack {
+           
+
             VStack(alignment: .leading) {
+                
+                VStack() {
+                    Text("Good morning!")
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.white)
+                        .bold()
+                        .font(.system(size: 61))
+                       
+                        
+                                                
+                    
+                    Text("SELECT YOUR TASK")
+                        .frame(maxWidth:.infinity)
+                        .padding()
+                        .foregroundColor(.white)
+                        .font(.system(size:32))
+                }
                 Button(action: {
                     print("Clicked Again")
                     
                     
+                    
                 }) {
-                    Text("   Hard Skills         ").foregroundColor(Color(red: 194/255, green: 23/255, blue: 58/255))
-                        .background(Color.white)
-                        .border(.black)
-                        .cornerRadius(11)
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(10)
-                        .position(x: 200, y: 400)
+                    Text("Hard Skills")
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(Color(red: 194/255, green: 23/255, blue: 58/255))
+                        .background(Color(.white))
+                        .bold()
+                        .font(.system(size:30))
                     
-                    
-                    
+                        
+                       
                     
                     
                     
                 }
-                VStack(alignment: .leading) {
+                .cornerRadius(10)
+                
                     
                     Button(action: {
                         print("click")
                         
                     }) {
-                        Text("   Soft Skills         ").foregroundColor(Color(red: 194/255, green: 23/255, blue: 58/255))
-                            .background(Color.white)
-                            .border(.black)
-                            .cornerRadius(11)
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .padding(10)
-                            .position(x: 200, y: 50)
+                        Text("Soft Skills")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(Color(red: 194/255, green: 23/255, blue: 58/255))
+                            .background(Color(.white))
+                            .bold()
+                            .font(.system(size:30))
+                            
+                        
+                        
+                            
                     }
-                    
-                    .frame(width:300, height: 300, alignment: .trailing)
-                }
-                
-                
+                    .cornerRadius(10)
+                     
+            
                 
                 
                 
             }
+            Spacer()
+            Image("img2")
+          
             
             
-        }
+        }.background(Color(red: 194/255, green: 23/255, blue: 58/255))
     }
-        struct ContentView_Previews: PreviewProvider {
+        
+    
+    
+
+
+        
+    
+struct ContentView_Previews: PreviewProvider {
             static var previews: some View {
                 WelcomeView()
                 
