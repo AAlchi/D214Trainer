@@ -13,8 +13,6 @@ struct WelcomeView: View {
         
         
         HStack {
-           
-
             VStack(alignment: .leading) {
                 
                 VStack() {
@@ -25,8 +23,6 @@ struct WelcomeView: View {
                         .bold()
                         .font(.system(size: 61))
                        
-                        
-                                                
                     
                     Text("SELECT YOUR TASK")
                         .frame(maxWidth:.infinity)
@@ -37,8 +33,6 @@ struct WelcomeView: View {
                 Button(action: {
                     print("Clicked Again")
                     
-                    
-                    
                 }) {
                     Text("Hard Skills")
                         .frame(maxWidth: .infinity)
@@ -47,12 +41,7 @@ struct WelcomeView: View {
                         .background(Color(.white))
                         .bold()
                         .font(.system(size:30))
-                    
-                        
-                       
-                    
-                    
-                    
+        
                 }
                 .cornerRadius(10)
                 
@@ -68,16 +57,8 @@ struct WelcomeView: View {
                             .background(Color(.white))
                             .bold()
                             .font(.system(size:30))
-                            
-                        
-                        
-                            
                     }
                     .cornerRadius(10)
-                     
-            
-                
-                
                 
             }
             Spacer()
@@ -87,12 +68,6 @@ struct WelcomeView: View {
             
         }.background(Color(red: 194/255, green: 23/255, blue: 58/255))
     }
-        
-    
-    
-
-
-        
     
 struct ContentView_Previews: PreviewProvider {
             static var previews: some View {
