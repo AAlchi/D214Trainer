@@ -28,7 +28,14 @@ struct VideoView: UIViewRepresentable {
     }
     
 }
+
 struct DisplayView: View {
+    // Will get the ID from the main page so that the data can be put here
+    
+    @Binding var id: String
+    
+    // Function needs to be implemented here to get the data according to the ID
+    
     var body: some View {
         ZStack {
             Color.white
@@ -57,20 +64,7 @@ struct DisplayView: View {
                    
                 // Step Box
                 VStack(spacing: 20) {
-                    Text("Step 1:")
-                        .font(.system(size: 50, weight: .bold))
-                        .foregroundColor(.white)
-                    
-                    Text("Watch this video")
-                        .font(.system(size: 30))
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                    VideoView(videoID: "iJLgi3sPf4Q")
-                        .frame(height:250)
-                        .frame(width: 450)
-                        .cornerRadius(15)
-                        .padding()
-                    
+                    RecipeComponent()
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
