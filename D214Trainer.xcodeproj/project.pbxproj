@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1400BC312D9B8075002E6991 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1400BC302D9B8075002E6991 /* DisplayView.swift */; };
+		14897B3C2DC04DED00872909 /* CreatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14897B3B2DC04DED00872909 /* CreatePage.swift */; };
 		A234CDAC2DA87C3A008FBE36 /* VideoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A234CDAB2DA87C3A008FBE36 /* VideoComponent.swift */; };
 		A234CDAE2DA87CF9008FBE36 /* RecipeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A234CDAD2DA87CF9008FBE36 /* RecipeComponent.swift */; };
 		A29631AF2D8CCDD20070A889 /* D214TrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29631AE2D8CCDD20070A889 /* D214TrainerApp.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		1400BC302D9B8075002E6991 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
+		14897B3B2DC04DED00872909 /* CreatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePage.swift; sourceTree = "<group>"; };
 		A234CDAB2DA87C3A008FBE36 /* VideoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComponent.swift; sourceTree = "<group>"; };
 		A234CDAD2DA87CF9008FBE36 /* RecipeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeComponent.swift; sourceTree = "<group>"; };
 		A29631AB2D8CCDD20070A889 /* D214Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D214Trainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +52,7 @@
 				A234CDAA2DA87AE6008FBE36 /* DisplayViewComponents */,
 				1400BC302D9B8075002E6991 /* DisplayView.swift */,
 				BE4942F72D8CD4A100A20E00 /* LoadingView.swift */,
+				14897B3B2DC04DED00872909 /* CreatePage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				C9BEF3BD2DB0435C002DC1CA /* CreateTask.swift in Sources */,
 				A234CDAE2DA87CF9008FBE36 /* RecipeComponent.swift in Sources */,
 				A29631B12D8CCDD20070A889 /* WelcomeView.swift in Sources */,
+				14897B3C2DC04DED00872909 /* CreatePage.swift in Sources */,
 				A29631AF2D8CCDD20070A889 /* D214TrainerApp.swift in Sources */,
 				1400BC312D9B8075002E6991 /* DisplayView.swift in Sources */,
 				BE4942F82D8CD4B200A20E00 /* LoadingView.swift in Sources */,
