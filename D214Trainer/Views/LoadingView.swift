@@ -1,112 +1,43 @@
 //
-//  ContentView.swift
-//  LoadingView
+//  LoadingView.swift
+//  D214Trainer
 //
-//  Created by Logan Hammond on 2/25/25.
+//  Created by Amir Eskarous on 3/26/25.
 //
-
 
 import SwiftUI
 
 struct LoadingView: View {
+    @State private var navigate = false
+    
     var body: some View {
-        ZStack {
-            Color.white.edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                HStack {
-                    Text("D214 Trainer")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(.white)
-                    Spacer()
-                    Text("Recipe | Make a Cappuccino")
-                        .foregroundColor(.white)
-                        .bold()
-                        .font(.largeTitle)
-                        .padding(.top, 30)
-                }
-                .padding()
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .fill(Color.white)
-                        .padding()
-                    
-                    VStack {
-                        HStack {
-                            Text("Cappuccino")
-                                .font(.largeTitle)
-                                .font(.title2)
-                                .bold()
-                                .padding()
-                                .frame(width: 900, height: 100)
-                                .border(Color.black, width: 5)               .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
-                                .foregroundColor(.white)
-                                .padding()
-                            Spacer()
-                            
-                            Image("cup")
-                                .resizable()
-                                .frame(width: 150, height: 150)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .padding()
-                        }
-                        .padding(.horizontal)
-                        
-                        VStack {
-                            Text("Ingredients")
-                                .font(.headline)
-                                
-                                .padding(.top)
-                                .font(.largeTitle)
-                            Text("1 shot of Espresso")
-                                .padding(.top, 2)
-                                .font(.largeTitle)
-                            Text("150 ml semi skimmed milk")
-                                .padding(.bottom)
-                                .font(.largeTitle)
-                        }
-                        .frame(width: 1000, height: 600)
-                        .border(Color.black, width: 7)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
-                        .foregroundColor(.white)
-                        .padding(.horizontal)
-                        
+        NavigationStack {
+            ZStack{
+                Color(red: 186/255, green: 12/255, blue: 47/255)
+                    .ignoresSafeArea()
+                VStack {
+                    HStack {
                         Spacer()
-                        
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                            }) {
-                                Image(systemName: "arrow.right")
-                                    .padding()
-                                    .frame(width: 100, height: 30)
-                                    .border(Color.black, width: 2)
-                                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.red))
-                                    .padding(.bottom)
-
-                            }
-                            .padding(.trailing, 100)
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: Color(red: 120/255, green: 180/255, blue: 255/255)))
+                            .scaleEffect(1.5)
                             .padding()
-                        }
                     }
-                }
-                HStack {
                     Spacer()
-                    Text("Soft Skill")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .padding(.trailing)
+                }
+                Image("BrewEd")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 300)
+            }
+            .navigationDestination(isPresented: $navigate) {
+                    WelcomeView()
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                    navigate = true
                 }
             }
         }
-    }
-}
-
-struct LoadingView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoadingView()
     }
 }

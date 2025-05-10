@@ -47,7 +47,6 @@
 		A20B96D82DA6F34C004A5ED4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C9BEF3BE2DB043FF002DC1CA /* CreateTaskComponents */,
 				C9BEF3BC2DB04351002DC1CA /* CreateTask.swift */,
 				A234CDAA2DA87AE6008FBE36 /* DisplayViewComponents */,
 				1400BC302D9B8075002E6991 /* DisplayView.swift */,
@@ -100,13 +99,6 @@
 				A29631B52D8CCDD40070A889 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		C9BEF3BE2DB043FF002DC1CA /* CreateTaskComponents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CreateTaskComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

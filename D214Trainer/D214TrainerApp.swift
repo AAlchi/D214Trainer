@@ -11,7 +11,7 @@ import SwiftUI
 struct D214TrainerApp: App {
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            LoadingView()
         }
     }
 }
