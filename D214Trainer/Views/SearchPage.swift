@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct SearchPage: View {    @Environment(\.presentationMode) var presentationMode
     @State private var searchText = ""
     @State private var selectedFilter: String = "Recipes"
 
@@ -33,30 +33,20 @@ struct ContentView: View {
                 // Top bar
                 HStack {
                     Button(action: {
-                        // Back action
+                        presentationMode.wrappedValue.dismiss()
                     }) {
                         Image(systemName: "chevron.left")
                             .font(.title2)
                             .foregroundColor(.white)
                     }
 
-                    Text("D214 Trainer")
+                    Text("BrewEd")
                         .font(.title2).bold()
                         .foregroundColor(.white)
 
                     Spacer()
-
-                    Button(action: {
-                        // Main screen
-                    }) {
-                        Text("Main Screen")
-                            .foregroundColor(.white)
-                            .bold()
-                    }
-
-                    Button(action: {
-                        // Create action
-                    }) {
+                    
+                    NavigationLink(destination: CreatePageView()) {
                         Text("Create")
                             .padding(.horizontal)
                             .padding(.vertical, 8)
@@ -64,20 +54,35 @@ struct ContentView: View {
                             .foregroundColor(.black)
                             .cornerRadius(8)
                     }
+                    .cornerRadius(10)
+
                 }
                 .padding()
                 .background(Color(red: 0.75, green: 0.05, blue: 0.15))
 
                 // Search bar & filters
-                VStack(spacing: 24) {
-                    TextField("Search", text: $searchText)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color(red: 0.75, green: 0.05, blue: 0.15))
-                        .cornerRadius(8)
-                        .padding(.horizontal)
+                VStack(alignment: .leading, spacing: 24) {
+                    ZStack {
+                        // Next step: align the textfield at the start
+                        TextField("", text: $searchText)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.black.opacity(0.2))
+                            .cornerRadius(8)
+                            .padding(.horizontal)
+                        
+                            HStack(alignment: .center) {
+                                VStack(alignment: .leading) {
 
-                    VStack(alignment: .leading, spacing: 12) {
+                                Text("Search for anything")
+                                    .foregroundStyle(Color.white)
+                                    .bold()
+                                    .padding(.horizontal)
+                            }
+                        }
+                    }
+
+                    HStack(alignment: .top, spacing: 12) {
                         ForEach(["Text", "Videos", "Recipes"], id: \.self) { filter in
                             Button(action: {
                                 selectedFilter = filter
@@ -85,9 +90,9 @@ struct ContentView: View {
                                 Text(filter)
                                     .font(.system(size: 20, weight: .semibold))
                                     .padding(.horizontal, 24)
-                                    .padding(.vertical, 12)
+                                    .padding(.vertical, 10)
                                     .background(selectedFilter == filter ?
-                                                Color.white : Color(red: 0.75, green: 0.05, blue: 0.15))
+                                                Color.black.opacity(0.1) : Color(red: 0.75, green: 0.05, blue: 0.15))
                                     .foregroundColor(selectedFilter == filter ? .black : .white)
                                     .cornerRadius(12)
                             }
@@ -99,7 +104,7 @@ struct ContentView: View {
 
                 // Results
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Results")
+                    Text("Results (\(filteredResults.count))")
                         .font(.title3)
                         .bold()
                         .padding(.horizontal)
@@ -146,9 +151,9 @@ struct ContentView: View {
 
                 Spacer()
             }
-            .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarBackButtonHidden(true)
     }
 
     func iconName(for type: String) -> String {
@@ -166,5 +171,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    SearchPage()
 }

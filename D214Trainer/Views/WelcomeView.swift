@@ -50,7 +50,7 @@ struct WelcomeView: View {
                             }
                             .cornerRadius(10)
                             
-                            NavigationLink(destination: DisplayView(id: .constant("46htbn"))) {
+                            NavigationLink(destination: SearchPage()) {
                                 Text("Soft Skills")
                                     .frame(maxWidth: .infinity)
                                     .padding()
