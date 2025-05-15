@@ -35,10 +35,8 @@ struct WelcomeView: View {
                                     .foregroundColor(.white)
                                     .font(.system(size:32))
                             }
-                            Button(action: {
-                                print("Clicked Again")
-                                
-                            }) {
+                            
+                            NavigationLink(destination: SearchPage(skillType: .constant("hard"))) {
                                 Text("Hard Skills")
                                     .frame(maxWidth: .infinity)
                                     .padding()
@@ -46,11 +44,10 @@ struct WelcomeView: View {
                                     .background(Color(.white))
                                     .bold()
                                     .font(.system(size:30))
-                                
                             }
                             .cornerRadius(10)
                             
-                            NavigationLink(destination: SearchPage()) {
+                            NavigationLink(destination: SearchPage(skillType: .constant("soft"))) {
                                 Text("Soft Skills")
                                     .frame(maxWidth: .infinity)
                                     .padding()

@@ -31,25 +31,45 @@ struct VideoView: UIViewRepresentable {
 
 struct DisplayView: View {
     // Will get the ID from the main page so that the data can be put here
-    
     @Binding var id: String
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     
     // Function needs to be implemented here to get the data according to the ID
     
     var body: some View {
-        ZStack {
-            Color.white
-                .ignoresSafeArea()
-            
-            VStack(spacing: 50) {
-                Spacer()
-                // Top Heading
-                Text("Cleaning the Espresso Machine")
-                    .font(.system(size: 45, weight: .bold))
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
+        GeometryReader { geo in
+            ZStack {
+                Color.white
+                    .ignoresSafeArea()
+                
+                VStack(spacing: 50) {
+                    Header(onBack: {
+                        presentationMode.wrappedValue.dismiss()
+                    }, type: "in")
+                    
+                    // Top Heading
+                    
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
+                        .frame(width: geo.size.width * 0.7, height: 100)
+                        .overlay(
+                            Text("Cleaning the Espresso Machine")
+                                .font(.system(size: 40, weight: .bold))
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.center)
+                                .padding()
+                        )
+                    
+                    
+                    
+                    // Step Box
+                    VStack(spacing: 20) {
+                        RecipeComponent()
+                    }
                     .padding()
-                    .frame(maxWidth: .infinity)
+                    .frame(width: geo.size.width * 0.8)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
                             .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
@@ -58,49 +78,45 @@ struct DisplayView: View {
                                     .stroke(Color.black, lineWidth: 4)
                             )
                     )
-                    .padding(.horizontal, 150)
-                
-              
-                   
-                // Step Box
-                VStack(spacing: 20) {
-                    RecipeComponent()
-                }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(
-                    RoundedRectangle(cornerRadius: 15)
-                        .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(Color.black, lineWidth: 4)
-                        )
-                )
-                .padding(.horizontal, 80)
-                
-            
-                
-                // Arrow Button Bottom Right
-                HStack {
-                    Spacer()
-                        .frame(width: 800.0)
-                    Button(action: {
-                        // Add your action here
-                    }) {
-                        Image(systemName: "arrowshape.forward.fill")
-                            .resizable()
-                                  .aspectRatio(contentMode: .fit)
-                            .frame(width: 100, height: 25)
-                            .foregroundColor(.white)
-                            .padding(10)
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
-                            )
-                    }
+                    .padding(.horizontal, 80)
                     
+                    
+                    
+                    // Arrow Button Bottom Right
+                    HStack {
+                        Button(action: {
+                            // Add your action here
+                        }) {
+                            Image(systemName: "arrowshape.backward.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 25)
+                                .foregroundColor(.white)
+                                .padding(10)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
+                                )
+                        }
+                        Spacer()
+                        Button(action: {
+                            // Add your action here
+                        }) {
+                            Image(systemName: "arrowshape.forward.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 25)
+                                .foregroundColor(.white)
+                                .padding(10)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
+                                )
+                        }
+                    }
+                    .frame(width: geo.size.width * 0.85)
+                    .padding(30)
                 }
-                .padding(30)
             }
         }
     }
