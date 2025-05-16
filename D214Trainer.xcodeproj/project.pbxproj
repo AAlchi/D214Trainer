@@ -25,6 +25,7 @@
 		A29631AE2D8CCDD20070A889 /* D214TrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D214TrainerApp.swift; sourceTree = "<group>"; };
 		A29631B22D8CCDD40070A889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A29631B52D8CCDD40070A889 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C9453DE82DD7BEFD00FBFDA0 /* D214Trainer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = D214Trainer.entitlements; sourceTree = "<group>"; };
 		C99EA9312DD3CFA3009C37E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C99EA9322DD3D527009C37E5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C99EA9342DD3D795009C37E5 /* CreatePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePageView.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		A29631AD2D8CCDD20070A889 /* D214Trainer */ = {
 			isa = PBXGroup;
 			children = (
+				C9453DE82DD7BEFD00FBFDA0 /* D214Trainer.entitlements */,
 				C99EA9312DD3CFA3009C37E5 /* Info.plist */,
 				A29631AE2D8CCDD20070A889 /* D214TrainerApp.swift */,
 				A20B96D82DA6F34C004A5ED4 /* Views */,
@@ -321,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = D214Trainer/D214Trainer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"D214Trainer/Preview Content\"";
@@ -353,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = D214Trainer/D214Trainer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"D214Trainer/Preview Content\"";

@@ -30,8 +30,10 @@ struct VideoView: UIViewRepresentable {
 }
 
 struct DisplayView: View {
+    @State var currStep: Int = 0
+
     // Will get the ID from the main page so that the data can be put here
-    @Binding var id: String
+    @Binding var data: ResultItem
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -55,7 +57,7 @@ struct DisplayView: View {
                         .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
                         .frame(width: geo.size.width * 0.7, height: 100)
                         .overlay(
-                            Text("Cleaning the Espresso Machine")
+                            Text(data.skillTitle)
                                 .font(.system(size: 40, weight: .bold))
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
@@ -66,7 +68,11 @@ struct DisplayView: View {
                     
                     // Step Box
                     VStack(spacing: 20) {
-                        RecipeComponent()
+                        if (data.skillType == "Recipes" || data.skillType == "Text") {
+                            RecipeComponent(data: .constant(data), stepNumber: $currStep)
+                        } else {
+                            VideoComponent()
+                        }
                     }
                     .padding()
                     .frame(width: geo.size.width * 0.8)
@@ -85,7 +91,7 @@ struct DisplayView: View {
                     // Arrow Button Bottom Right
                     HStack {
                         Button(action: {
-                            // Add your action here
+                            currStep -= 1
                         }) {
                             Image(systemName: "arrowshape.backward.fill")
                                 .resizable()
@@ -100,7 +106,7 @@ struct DisplayView: View {
                         }
                         Spacer()
                         Button(action: {
-                            // Add your action here
+                            currStep += 1
                         }) {
                             Image(systemName: "arrowshape.forward.fill")
                                 .resizable()
@@ -121,10 +127,3 @@ struct DisplayView: View {
         }
     }
 }
-
-//struct DisplayView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DisplayView()
-//    }
-//}
-

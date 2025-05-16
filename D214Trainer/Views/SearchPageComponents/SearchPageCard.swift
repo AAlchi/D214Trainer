@@ -9,19 +9,17 @@ import Foundation
 import SwiftUI
 
 struct SearchPageCard: View {
-    @Binding var cardTitle: String
-    @Binding var cardType: String
-    @Binding var cardDescription: String
+    @Binding var data: ResultItem
     
     var body: some View {
-        NavigationLink(destination: DisplayView(id: .constant(""))) {
+        NavigationLink(destination: DisplayView(data: .constant(data))) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text(cardTitle)
+                        Text(data.skillTitle)
                             .font(.headline)
                         
-                        Text(cardType)
+                        Text(data.skillType)
                             .font(.caption)
                             .padding(.horizontal, 8)
                             .padding(.vertical, 4)
@@ -30,13 +28,13 @@ struct SearchPageCard: View {
                             .cornerRadius(10)
                     }
                     
-                    Text(cardDescription)
+                    Text(data.skillDescription)
                         .font(.subheadline)
                 }
                 
                 Spacer()
                 
-                Image(systemName: iconName(for: cardType))
+                Image(systemName: iconName(for: data.skillType))
                     .resizable()
                     .scaledToFit()
                     .frame(width: 60, height: 60)

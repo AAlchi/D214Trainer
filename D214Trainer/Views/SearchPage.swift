@@ -5,28 +5,15 @@ struct SearchPage: View {
     @State private var searchText = ""
     @State private var selectedFilter: String = "All"
     @Environment(\.presentationMode) var presentationMode
-
-    struct ResultItem: Identifiable {
-        let id = UUID()
-        let title: String
-        let description: String
-        let type: String
-        let skillType: String
-    }
     
     let allResults: [ResultItem] = [
-        .init(title: "How to make a Cappuccino", description: "Learn how to make a Cappuccino from scratch!", type: "Recipes", skillType: "hard"),
-        .init(title: "Benefits of Black Coffee", description: "A deep dive into health benefits.", type: "Text", skillType: "hard"),
-        .init(title: "Espresso Basics", description: "A video tutorial on espresso shots.", type: "Videos", skillType: "soft"),
-        .init(title: "Latte Art Guide", description: "Master the art of milk and foam.", type: "Text", skillType: "hard"),
-        .init(title: "Mocha Recipe", description: "Chocolate and coffee together, yes please.", type: "Recipes", skillType: "soft"),
-        .init(title: "Brewing Techniques", description: "Video on pour-over vs French press.", type: "Videos", skillType: "hard")
     ]
+
     
     var filteredResults: [ResultItem] {
         allResults.filter { item in
-            (selectedFilter == item.type || selectedFilter == "All") &&
-            (searchText.isEmpty || item.title.lowercased().contains(searchText.lowercased()))
+            (selectedFilter == item.skillType || selectedFilter == "All") &&
+            (searchText.isEmpty || item.skillTitle.lowercased().contains(searchText.lowercased()))
         }
     }
     
@@ -78,10 +65,8 @@ struct SearchPage: View {
                         }
                     }
                     List(filteredResults) { item in
-                        if (item.skillType == skillType) {
-                            SearchPageCard(cardTitle: .constant(item.title), cardType: .constant(item.type), cardDescription: .constant(item.description))
-                                .listRowSeparator(.hidden)
-                        }
+                        SearchPageCard(data: .constant(item))
+                            .listRowSeparator(.hidden)
                     }
                     .listStyle(PlainListStyle())
                 }
