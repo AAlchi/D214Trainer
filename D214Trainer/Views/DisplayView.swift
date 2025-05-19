@@ -5,29 +5,7 @@
 //  Created by Daniel T. Do on 3/22/25.
 //
 
-import SwiftUI
-import WebKit
-
-struct VideoView: UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> WKWebView {
-        let webView = WKWebView()
-        webView.configuration.allowsInlineMediaPlayback = true
-        webView.configuration.mediaTypesRequiringUserActionForPlayback = []
-        return webView
-    }
-    
-    let videoID: String //Variable to change video
-    
-    func updateUIView(_ uiView: WKWebView, context: Context){
-        guard let url = URL(string: "https://www.youtube.com/embed/\(videoID)?si=dJDFIBwrDrO55Nac") else {
-            return
-        }
-        let request = URLRequest(url: url)
-        uiView.load(request)
-    }
-    
-}
+import SwiftUI 
 
 struct DisplayView: View {
     @State var currStep: Int = 0
@@ -71,7 +49,7 @@ struct DisplayView: View {
                         if (data.skillType == "Recipes" || data.skillType == "Text") {
                             RecipeComponent(data: .constant(data), stepNumber: $currStep)
                         } else {
-                            VideoComponent()
+                            VideoComponent(data: .constant(data), currStep: $currStep)
                         }
                     }
                     .padding()

@@ -20,8 +20,11 @@ struct SearchPage: View {
                 Step(text: "Add coffee"),
                 Step(text: "After a minute or two, you have coffee!")
         ]),
-        ResultItem(skillDescription: "Learn how to make a cake", skillType: "Videos", skillCategory: "hard", skillTitle: "Making a Cake", videoLink: "https://www.youtube.com/watch?v=qtlhdIfojmc&pp=ygUJI2Nha2VfYW5k", steps: [
-                Step(text: "Whats the video talking about?", answers: ["Making a cake", "Option B", "Option C", "Option D"], correctAnswer: "Making a cake")
+        ResultItem(skillDescription: "Learn how to make a cake", skillType: "Videos", skillCategory: "hard", skillTitle: "Making a Cake", videoLink: "https://www.youtube.com/embed/4UNjcAtTnjM", steps: [
+                Step(text: "Whats the video talking about?", answers: ["Making a cake", "Option B", "Option C", "Option D"], correctAnswer: "Making a cake"),
+                Step(text: "Step 2", answers: [
+                    "1", "Correct", "3", "4"
+                ], correctAnswer: "Correct")
         ]),
         ResultItem(skillDescription: "Quick way to clean up", skillType: "Text", skillCategory: "soft", skillTitle: "Cleaning Up", videoLink: "", steps: [
                 Step(text: "Clean the counters"),
