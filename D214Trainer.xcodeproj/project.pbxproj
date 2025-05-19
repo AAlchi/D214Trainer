@@ -17,7 +17,6 @@
 		C99EA9402DD3D795009C37E5 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EA9362DD3D795009C37E5 /* DisplayView.swift */; };
 		C99EA9412DD3D795009C37E5 /* CreatePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EA9342DD3D795009C37E5 /* CreatePageView.swift */; };
 		C99EA9432DD3D795009C37E5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EA93C2DD3D795009C37E5 /* WelcomeView.swift */; };
-		C99EA9442DD3D795009C37E5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EA93A2DD3D795009C37E5 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		C99EA9362DD3D795009C37E5 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		C99EA9372DD3D795009C37E5 /* RecipeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeComponent.swift; sourceTree = "<group>"; };
 		C99EA9382DD3D795009C37E5 /* VideoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComponent.swift; sourceTree = "<group>"; };
-		C99EA93A2DD3D795009C37E5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C99EA93B2DD3D795009C37E5 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		C99EA93C2DD3D795009C37E5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,7 +59,6 @@
 				C99EA9342DD3D795009C37E5 /* CreatePageView.swift */,
 				C99EA9362DD3D795009C37E5 /* DisplayView.swift */,
 				C99EA9392DD3D795009C37E5 /* DisplayViewComponents */,
-				C99EA93A2DD3D795009C37E5 /* LoadingView.swift */,
 				C99EA93B2DD3D795009C37E5 /* SearchPage.swift */,
 				C99EA93C2DD3D795009C37E5 /* WelcomeView.swift */,
 			);
@@ -196,7 +193,6 @@
 				C99EA9402DD3D795009C37E5 /* DisplayView.swift in Sources */,
 				C99EA9412DD3D795009C37E5 /* CreatePageView.swift in Sources */,
 				C99EA9432DD3D795009C37E5 /* WelcomeView.swift in Sources */,
-				C99EA9442DD3D795009C37E5 /* LoadingView.swift in Sources */,
 				A29631AF2D8CCDD20070A889 /* D214TrainerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +331,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -368,7 +363,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
