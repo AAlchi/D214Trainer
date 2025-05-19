@@ -11,6 +11,7 @@ import SwiftUI
 struct Header: View {
     var onBack: () -> Void
     var type: String
+    var name: String?
     
     @State var showAlert = false
 
@@ -24,8 +25,9 @@ struct Header: View {
                         .font(.title2)
                         .foregroundColor(.white)
                 }
-                Text("BrewEd")
-                    .font(.title2).bold()
+                Text(((name != nil) ? name : "BrewEd") ?? "BrewEd")
+                    .font(.title2)
+                    .bold()
                     .foregroundColor(.white)
             }
             

@@ -12,13 +12,19 @@ struct RecipeComponent: View {
             
             VStack(spacing: 40) {
                 Spacer() // This moves content downward slightly
-                
-                Text("\(data.steps?[stepNumber].text ?? "")")
-                    .font(.title)
-                    .bold()
-                    .foregroundStyle(.white)
-                Image("\(data.steps?[stepNumber].img ?? "")")
-                
+                HStack {
+                    Spacer()
+                    Text("\(data.steps?[stepNumber].text ?? "")")
+                        .font(.title)
+                        .bold()
+                        .foregroundStyle(.white)
+                    Spacer()
+                    Image("BrewEd")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(5.0)
+                    Spacer()
+                }
                 Spacer()
             }
             .padding()

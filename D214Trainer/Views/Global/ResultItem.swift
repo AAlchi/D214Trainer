@@ -10,8 +10,8 @@ import Foundation
 struct ResultItem: Identifiable {
     let id = UUID()
     let skillDescription: String
-    let skillType: String
-    let skillCategory: String
+    let skillType: String // Recipes, Text, or Videos
+    let skillCategory: String // "soft" for soft skills and "hard" for hard skills
     let skillTitle: String
     let videoLink: String?
     let steps: [Step]?
@@ -20,7 +20,6 @@ struct ResultItem: Identifiable {
 struct Step: Identifiable {
     let id = UUID()
     var text: String
-    var question: String?
     var img: String?
     var answers: [String]?
     var correctAnswer: String?

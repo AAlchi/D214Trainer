@@ -90,35 +90,9 @@ struct DisplayView: View {
                     
                     // Arrow Button Bottom Right
                     HStack {
-                        Button(action: {
-                            currStep -= 1
-                        }) {
-                            Image(systemName: "arrowshape.backward.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 100, height: 25)
-                                .foregroundColor(.white)
-                                .padding(10)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
-                                )
-                        }
+                        ButtonComp(currStep: $currStep, maxStep: .constant(data.steps?.count ?? 0), symbol: .constant("arrowshape.backward.fill"), job: .constant("subtract"), theOpacity: .constant(currStep == 0 ? 0.0 : 1.0))
                         Spacer()
-                        Button(action: {
-                            currStep += 1
-                        }) {
-                            Image(systemName: "arrowshape.forward.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 100, height: 25)
-                                .foregroundColor(.white)
-                                .padding(10)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color(red: 0.75, green: 0.05, blue: 0.15))
-                                )
-                        }
+                        ButtonComp(currStep: $currStep, maxStep: .constant(data.steps?.count ?? 0), symbol: .constant("arrowshape.forward.fill"), job: .constant("add"), theOpacity: .constant(currStep ==  (data.steps?.count ?? 0) - 1 ? 0.0 : 1.0))
                     }
                     .frame(width: geo.size.width * 0.85)
                     .padding(30)
